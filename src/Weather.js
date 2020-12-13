@@ -1,5 +1,4 @@
 import React from "react";
-import Search from "./Search";
 
 export default function Weather() {
   let weatherData = {
@@ -15,9 +14,7 @@ export default function Weather() {
       <div className="card">
         <div className="card-body">
           <div className="row">
-            <div className="col-9">
-              <Search />
-            </div>
+            <div className="col-9"></div>
             <div className="col-3">
               <div className="unit-temps">
                 <span className="units">
