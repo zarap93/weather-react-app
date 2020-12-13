@@ -1,10 +1,10 @@
 import "./index.css";
-import Weather from "./Weather";
+import Search from "./Search";
 
 function App() {
   return (
     <div className="App">
-      <Weather />
+      <Search />
     </div>
   );
 }
