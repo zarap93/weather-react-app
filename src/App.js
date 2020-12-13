@@ -1,6 +1,5 @@
 import "./index.css";
 import Weather from "./Weather";
-import bootstrap from "bootstrap";
 
 function App() {
   return (
