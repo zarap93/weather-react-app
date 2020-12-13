@@ -73,6 +73,15 @@ export default function Search() {
           <div className="row time-of-day" id="daily-forecast"></div>
         </div>
       </div>
+      <p>
+        <a
+          href="https://github.com/zarap93/weather-react-app.git"
+          target="_new"
+        >
+          Open-source code
+        </a>{" "}
+        by Zara Paris
+      </p>
     </div>
   );
 }
