@@ -1,5 +1,5 @@
 .container {
-  max-width: 600px;
+  max-width: 650px;
 }
 
 form {
@@ -17,7 +17,7 @@ input.form-control {
 }
 
 .unit-temps .active {
-  color: black;
+  color: #6c757d;
   cursor: default;
 }
 
@@ -27,4 +27,29 @@ input.form-control {
 
 ul {
   list-style-type: none;
+  color: #6c757d;
+}
+
+h4 {
+  margin: 10px 20px;
+  color: #6c757d;
+}
+
+.date-time-weather,
+.description {
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 30px;
+  color: #6c757d;
+}
+
+.current-info {
+  color: black;
+  padding: 10px;
+  margin-left: 15px;
+}
+
+p {
+  text-align: center;
+  margin-top: 10px;
 }

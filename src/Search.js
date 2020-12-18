@@ -39,12 +39,12 @@ export default function Search() {
             </div>
           </div>
         </div>
-        <h5>Toronto, ON</h5>
-        <ul>
+        <h4>Toronto</h4>
+        <ul className="date-time-weather">
           <li>Last Updated: Thursday 15:45</li>
           <li>Snow</li>
         </ul>
-        <div className="row">
+        <div className="row current-info">
           <h1 className="col-4">2°</h1>
           <div className="col-4">
             <img src={weatherData.imgUrl} alt={weatherData.description} />
@@ -57,6 +57,15 @@ export default function Search() {
           </div>
         </div>
       </div>
+      <p>
+        <a
+          href="https://github.com/zarap93/weather-react-app.git"
+          target="_new"
+        >
+          Open-source code
+        </a>{" "}
+        by Zara Paris
+      </p>
     </div>
   );
 }
