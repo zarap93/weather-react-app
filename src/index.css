@@ -1,3 +1,30 @@
+.container {
+  max-width: 600px;
+}
+
+form {
+  margin: 10px 10px;
+  width: 100%;
+}
+
+input.form-control {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.unit-temps {
+  padding: 10px 20px;
+}
+
+.unit-temps .active {
+  color: black;
+  cursor: default;
+}
+
+.unit-temps .active:hover {
+  text-decoration: none;
+}
+
 ul {
   list-style-type: none;
 }
