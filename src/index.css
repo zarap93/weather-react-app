@@ -28,18 +28,12 @@ input.form-control {
 ul {
   list-style-type: none;
   color: #6c757d;
+  margin: 0;
+  padding: 0 20px;
 }
 
 h4 {
-  margin: 10px 20px;
-  color: #6c757d;
-}
-
-.date-time-weather,
-.description {
-  margin-top: 0;
-  margin-left: 0;
-  margin-bottom: 30px;
+  margin: 10px 20px 0;
   color: #6c757d;
 }
 
