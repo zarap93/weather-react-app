@@ -5,27 +5,23 @@ import "./index.css";
 import { get } from "jquery";
 
 export default function Search() {
-  let weatherImage = {
-    imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
-  };
-
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
+      ready: true,
+      city: response.data.name,
+      date: "Saturday, 15:22",
+      description: response.data.weather[0].main,
       temperature: Math.round(response.data.main.temp),
       wind: Math.round(response.data.wind.speed),
       humidity: Math.round(response.data.main.humidity),
-      city: response.data.name,
-      description: response.data.weather[0].main,
+      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
     });
-
-    setReady(true);
   }
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="Search">
         <div className="card">
@@ -61,13 +57,13 @@ export default function Search() {
           </div>
           <h4>{weatherData.city}</h4>
           <ul className="date-time-weather">
-            <li>Last Updated: Thursday 15:45</li>
-            <li>{weatherData.description}</li>
+            <li>Last Updated: {weatherData.date}</li>
+            <li className="text-capitalize">{weatherData.description}</li>
           </ul>
           <div className="row current-info">
             <h1 className="col-4">{weatherData.temperature}°</h1>
             <div className="col-4">
-              <img src={weatherImage.imgUrl} alt={weatherData.description} />
+              <img src={weatherData.iconUrl} alt={weatherData.description} />
             </div>
             <div className="col-4">
               <ul>
