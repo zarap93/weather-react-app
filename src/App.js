@@ -1,4 +1,5 @@
 import "./index.css";
+import axios from "axios";
 import Search from "./Search";
 
 function App() {

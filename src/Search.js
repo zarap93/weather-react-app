@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
+import { get } from "jquery";
 
 export default function Search() {
   let weatherData = {
     imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
   };
+  const apiKey = `689e969de90a91f7c9389015a9661d89`;
+  let city = "Toronto";
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   return (
     <div className="Search">
       <div className="card">
@@ -45,7 +50,7 @@ export default function Search() {
           <li>Snow</li>
         </ul>
         <div className="row current-info">
-          <h1 className="col-4">2°</h1>
+          <h1 className="col-4">-2°</h1>
           <div className="col-4">
             <img src={weatherData.imgUrl} alt={weatherData.description} />
           </div>
@@ -55,6 +60,7 @@ export default function Search() {
               <li>Wind: 10 km/h</li>
             </ul>
           </div>
+          <div className="row time-of-day" id="daily-forecast"></div>
         </div>
       </div>
       <p>
