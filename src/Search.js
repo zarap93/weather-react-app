@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
 import { get } from "jquery";
 
-export default function Search() {
+export default function Search(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
@@ -12,7 +13,7 @@ export default function Search() {
     setWeatherData({
       ready: true,
       city: response.data.name,
-      date: "Saturday, 15:22",
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].main,
       temperature: Math.round(response.data.main.temp),
       wind: Math.round(response.data.wind.speed),
@@ -57,7 +58,9 @@ export default function Search() {
           </div>
           <h4>{weatherData.city}</h4>
           <ul className="date-time-weather">
-            <li>Last Updated: {weatherData.date}</li>
+            <li>
+              <FormattedDate date={weatherData.date} />
+            </li>
             <li className="text-capitalize">{weatherData.description}</li>
           </ul>
           <div className="row current-info">
@@ -87,8 +90,7 @@ export default function Search() {
     );
   } else {
     const apiKey = `689e969de90a91f7c9389015a9661d89`;
-    let city = "Toronto";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(url).then(handleResponse);
 
     return "Loading...";
