@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import FormattedDate from "./FormattedDate";
 import WeatherInfo from "./WeatherInfo";
 import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
-import { get } from "jquery";
 
 export default function Search(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
