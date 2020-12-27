@@ -12,8 +12,13 @@ input.form-control {
   margin-right: 10px;
 }
 
+.temp {
+  font-size: 45px;
+}
+
 .unit-temps {
-  padding: 10px 20px;
+  font-size: 15px;
+  margin-left: -10px;
 }
 
 .unit-temps .active {

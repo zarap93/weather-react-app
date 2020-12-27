@@ -60,21 +60,6 @@ export default function Search(props) {
                 </button>
               </form>
             </div>
-            <div className="col-3">
-              <div className="unit-temps">
-                <span className="units">
-                  <a href="/" className="active" id="celsius">
-                    {" "}
-                    °C
-                  </a>{" "}
-                  |
-                  <a href="/" className="fahrenheit">
-                    {" "}
-                    °F
-                  </a>
-                </span>
-              </div>
-            </div>
           </div>
           <div>
             {" "}
