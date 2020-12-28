@@ -1,0 +1,9 @@
+.weather-forecast {
+  text-align: center;
+  margin: 20px;
+}
+
+.canvas {
+  display: block;
+  margin: 5px auto;
+}
