@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import Forecast from "./Forecast";
 import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
 
@@ -42,7 +43,7 @@ export default function Search(props) {
       <div className="Search">
         <div className="card">
           <div className="row">
-            <div className="col-9">
+            <div className="col-11">
               <form
                 className="form-inline"
                 id="enter-city"
@@ -62,8 +63,8 @@ export default function Search(props) {
             </div>
           </div>
           <div>
-            {" "}
-            <WeatherInfo data={weatherData} />{" "}
+            <WeatherInfo data={weatherData} />
+            <Forecast city={weatherData.city} />
           </div>
         </div>
         <p>

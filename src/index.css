@@ -1,9 +1,10 @@
 .container {
-  max-width: 650px;
+  max-width: 600px;
+  margin-top: 10px;
 }
 
 form {
-  margin: 10px 10px;
+  margin: 10px 20px;
   width: 100%;
 }
 
